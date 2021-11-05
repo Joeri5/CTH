@@ -1,0 +1,11 @@
+body{
+    background-image: url(./images/100x100.gif);
+    color: midnightblue
+}
+
+div{
+    background-color: midnightblue;
+    color:mistyrose;
+    width: 400px;
+    height: 200px;
+}

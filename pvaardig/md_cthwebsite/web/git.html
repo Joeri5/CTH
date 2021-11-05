@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="icon" href="/web/images/icon.png" type="image/png" sizes="16x16">
+        <link rel="stylesheet" href="/web/stylesheet.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/9258396537.js" crossorigin="anonymous"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+        </style>
+    </head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-ligth">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/web/index.html"><i class="fab fa-codepen"></i> CheatSheet</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/web/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Git</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/web/console.html">Console</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/web/github.html">GitHub</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="container-fluid" style="text-align: center;font-family: 'Oxygen', sans-serif;">
+        <p>
+            <h1>Git Commands</h1>
+        </p>
+        <br>
+        <p>
+          <ul class="list-group container">
+            <li class="list-group-item"><b>SETUP</b></li>
+            <li class="list-group-item"><code>git config --global user.name “[firstname lastname]”</code><br>set a name that is identifiable for credit when review version history</li>
+            <li class="list-group-item"><code>git config --global user.email “[valid-email]”</code><br>set an email address that will be associated with each history marker</li>
+            <li class="list-group-item"><code>git config --global color.ui auto</code><br>set automatic command line coloring for Git for easy reviewing</li>
+          </ul>
+        </p>
+        <br>
+        <p>
+          <ul class="list-group container">
+            <li class="list-group-item"><b>SETUP & INIT</b></li>
+            <li class="list-group-item"><code>git init</code><br>initialize an existing directory as a Git repository</li>
+            <li class="list-group-item"><code>git clone [url]</code><br>retrieve an entire repository from a hosted location via URL</li>
+          </ul>
+        </p>
+        <br>
+        <p>
+          <ul class="list-group container">
+            <li class="list-group-item"><b>STAGE & SNAPSHOT</b></li>
+            <li class="list-group-item"><code>git status</code><br>show modified files in working directory, staged for your next commit</li>
+            <li class="list-group-item"><code>git add [file]</code><br>add a file as it looks now to your next commit (stage)</li>
+            <li class="list-group-item"><code>git reset [file]</code><br>unstage a file while retaining the changes in working directory</li>
+            <li class="list-group-item"><code>git diff</code><br>diff of what is changed but not staged</li>
+            <li class="list-group-item"><code>git diff --staged</code><br>diff of what is staged but not yet commited</li>
+            <li class="list-group-item"><code>git commit -m “[descriptive message]”</code><br>commit your staged content as a new commit snapshot</li>
+          </ul>
+        </p>
+        <br>
+        <p>
+          <ul class="list-group container">
+            <li class="list-group-item"><b>BRANCH & MERGE</b></li>
+            <li class="list-group-item"><code>git branch</code><br>list your branches. a * will appear next to the currently active branch</li>
+            <li class="list-group-item"><code>git branch [branch-name]</code><br>create a new branch at the current commit</li>
+            <li class="list-group-item"><code>git checkout</code><br>switch to another branch and check it out into your working directory</li>
+            <li class="list-group-item"><code>git merge [branch]</code><br>merge the specified branch’s history into the current one</li>
+            <li class="list-group-item"><code>git log</code><br>show all commits in the current branch’s history</li>
+          </ul>
+        </p>
+        <br>
+        <p>
+          <ul class="list-group container">
+            <li class="list-group-item"><b>INSPECT & COMPARE</b></li>
+            <li class="list-group-item"><code>git log</code><br>show the commit history for the currently active branch</li>
+            <li class="list-group-item"><code>git log branchB..branchA</code><br>show the commits on branchA that are not on branchB</li>
+            <li class="list-group-item"><code>git log --follow [file]</code><br>show the commits that changed file, even across renames</li>
+            <li class="list-group-item"><code>git diff branchB...branchA</code><br>show the diff of what is in branchA that is not in branchB</li>
+            <li class="list-group-item"><code>git show [SHA]</code><br>show any object in Git in human-readable format</li>
+          </ul>
+        </p>
+        <br>
+        <p>
+          <ul class="list-group container">
+            <li class="list-group-item"><b>TRACKING PATH CHANGES</b></li>
+            <li class="list-group-item"><code>git rm [file]</code><br>delete the file from project and stage the removal for commit</li>
+            <li class="list-group-item"><code>git mv [existing-path] [new-path]</code><br>change an existing file path and stage the move</li>
+            <li class="list-group-item"><code>git log --stat -M</code><br>show all commit logs with indication of any paths that moved</li>
+          </ul>
+        </p>
+        <br>
+        <p>
+          <ul class="list-group container">
+            <li class="list-group-item"><b>IGNORING PATTERNS</b></li>
+            <li class="list-group-item"><code>logs/&nbsp; | *.notes | &nbsp;pattern*/</code><br>Save a file with desired paterns as .gitignore with either direct string matches or wildcard globs.</li>
+            <li class="list-group-item"><code>git config --global core.excludesfile [file]</code><br>system wide ignore patern for all local repositories</li>
+          </ul>
+        </p>
+        <br>
+        <p>
+          <ul class="list-group container">
+            <li class="list-group-item"><b>SHARE & UPDATE</b></li>
+            <li class="list-group-item"><code>git remote add [alias] [url]</code><br>add a git URL as an alias</li>
+            <li class="list-group-item"><code>git fetch [alias]</code><br>fetch down all the branches from that Git remote</li>
+            <li class="list-group-item"><code>git merge [alias]/[branch]</code><br>merge a remote branch into your current branch to bring it up to date</li>
+            <li class="list-group-item"><code>git push [alias] [branch] </code><br>Transmit local branch commits to the remote repository branch</li>
+            <li class="list-group-item"><code>git pull</code><br>fetch and merge any commits from the tracking remote branch</li>
+          </ul>
+        </p>
+        <br>
+        <p>
+          <ul class="list-group container">
+            <li class="list-group-item"><b>REWRITE HISTORY</b></li>
+            <li class="list-group-item"><code>git rebase [branch]</code><br>apply any commits of current branch ahead of specified one</li>
+            <li class="list-group-item"><code>git reset --hard [commit]</code><br>clear staging area, rewrite working tree from specified commit</li>
+          </ul>
+        </p>
+        <br>
+        <p>
+          <ul class="list-group container">
+            <li class="list-group-item"><b>TEMPORARY COMMITS</b></li>
+            <li class="list-group-item"><code>git stash</code><br>Save modified and staged changes</li>
+            <li class="list-group-item"><code>git stash list</code><br>list stack-order of stashed file changes</li>
+            <li class="list-group-item"><code>git stash pop</code><br>write working from top of stash stack</li>
+            <li class="list-group-item"><code>git stash drop</code><br>discard the changes from top of stash stack</li>
+          </ul>
+        </p>
+    </div>
+    <div class="container-fluid">
+      <footer class="py-3 my-4">
+          <hr>
+        <p class="text-center text-muted">©2021&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-paint-brush"></i>&nbsp;<a class="ghlink" href="https://github.com/Joeri5" target="_blank">Joeri Schenk</a></p>
+      </footer>
+    </div>
+</body>
+</html>

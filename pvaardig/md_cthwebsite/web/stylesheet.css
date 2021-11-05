@@ -1,0 +1,29 @@
+.ghlink {
+  color: black;
+  text-decoration: none;
+}
+
+.ghlink:hover {
+  color: rgb(165, 160, 160);
+  text-decoration: none;
+}
+
+.btna {
+  color:rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.btna:hover {
+  color:black;
+  text-decoration: none;
+}
+
+.gitlink {
+  color: black;
+  text-decoration: none;
+}
+
+.gitlink:hover {
+  color: blue;
+  text-decoration: none;
+}
